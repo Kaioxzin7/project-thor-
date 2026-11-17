@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Thor: Ragnarok - Landing Page Oficial com conteúdo interativo 3D do Mjolnir, trailer oficial e experiências imersivas.">
+  <title>Thor: Ragnarok - Landing Page Oficial</title>
+  
+  <!-- Preload fonts and styling -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+
+  <!-- ================= PRELOADER ================= -->
+  <div id="preloader">
+    <div class="preloader-content">
+      <img src="assets/hammer-logo.png" alt="Thor Logo" class="preloader-logo">
+      <div class="preloader-bar">
+        <div class="preloader-progress"></div>
+      </div>
+      <div class="preloader-percent" id="preloader-percent">0%</div>
+    </div>
+  </div>
+
+  <!-- ================= HERO SECTION ================= -->
+  <header class="section-hero" id="hero">
+    <!-- Async Background Video Container -->
+    <div class="bg-media-container">
+      <video class="bg-video-async" id="hero-video" autoplay muted loop playsinline>
+        <source src="assets/video-hero.mp4" type="video/mp4">
+      </video>
+      <div class="bg-overlay"></div>
+    </div>
+
+    <!-- Navigation Header -->
+    <nav class="navbar" id="navbar">
+      <a href="#hero" class="logo-container" aria-label="Voltar ao início">
+        <img src="assets/hammer-logo.png" alt="Hammer Logo" class="logo-image">
+      </a>
+      <div class="nav-links">
+        <a href="#trailer-section" class="nav-link">TRAILER</a>
+        <a href="#sobre" class="nav-link">SOBRE</a>
+        <a href="#footer" class="nav-link">INGRESSOS</a>
+      </div>
+    </nav>
+
+    <!-- Hero Content -->
+    <div class="hero-content">
+      <h1 class="hero-title">THOR
+        AMOR E 
+        TROVÃO</h1>
+      <p class="hero-subtitle reveal-on-scroll fade-in-up" style="transition-delay: 0.1s;">
+        Ele não é um herói porque escolheu ser. Ele é um herói porque não existe outras opção.
+      </p>
+      <div class="hero-buttons reveal-on-scroll fade-in-up" style="transition-delay: 0.2s;">
+        <a href="https://www.ingresso.com/filme/thor-amor-e-trovao" class="btn btn-primary" id="hero-btn-ingressos" target="_blank" rel="noopener noreferrer">GARANTA SEU INGRESSO</a>
+        <a href="#trailer-section" class="btn btn-secondary">ASSISTA AO TRAILER</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= MIDDLE / SECTIONS ================= -->
+  <main class="middle-section" id="sobre" style="background-image: url('assets/bg-secoes.webp');">
+    
+
+    
+    <!-- Trailer Section -->
+    <section class="trailer-container reveal-on-scroll scale-in" id="trailer-section">
+      <div class="video-wrapper" id="trailer-wrapper">
+        <video id="trailer-video" autoplay muted loop playsinline>
+          <source src="assets/trailer.mp4" type="video/mp4">
+          Seu navegador não suporta a reprodução deste vídeo.
+        </video>
+        <!-- Custom Play Button Overlay -->
+        <div class="play-overlay" id="trailer-overlay">
+          <img src="assets/play-btn.png" alt="Play Trailer" class="play-button-img">
+        </div>
+      </div>
+    </section>
+
+    <!-- Mjolnir and Info Section -->
+    <section class="info-grid">
+      
+      <!-- Block 1: Text Left, Circle Right -->
+      <div class="info-row row-left">
+        <div class="info-text reveal-on-scroll fade-in-left">
+          <h2>THOR ODINSON NÃO É APENAS UM GUERREIRO. É O FILHO DE ASGARD, O PORTADOR DO MJOLNIR, O TROVÃO QUE ECOA PELOS NOVE REINOS.</h2>
+        </div>
+        <div class="circle-container-3d reveal-on-scroll fade-in-right">
+          <div class="circular-frame">
+            <div class="mjolnir-viewer"
+               data-model-src="assets/martelo.glb"
+               data-orbit="45deg 75deg 8m"
+               aria-label="Mjolnir 3D Viewer">
+          </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Block 2: Circle Left, Text Right -->
+      <div class="info-row row-right">
+        <div class="circle-container-3d reveal-on-scroll fade-in-left">
+          <div class="circular-frame">
+            <div class="mjolnir-viewer"
+                 data-model-src="assets/martelo.glb"
+                 data-orbit="-45deg 80deg 8m"
+                 aria-label="Mjolnir 3D Viewer">
+            </div>
+          </div>
+        </div>
+        <div class="info-text reveal-on-scroll fade-in-right">
+          <h2 class="text-right">QUANDO A ESCURIDÃO AMEAÇA CONSUMIR TUDO, NÃO HÁ EXÉRCITO, NÃO HÁ ESTRATÉGIA</h2>
+        </div>
+      </div>
+
+      <!-- Block 3: Text Top, Circle Center -->
+      <div class="info-row row-center">
+        <div class="info-text full-width reveal-on-scroll fade-in-up">
+          <h2 class="text-center">HÁ APENAS ELE, O MARTELO, E A TEMPESTADE QUE CARREGA DENTRO DE SI.</h2>
+        </div>
+        <div class="circle-container-3d center-circle reveal-on-scroll scale-in" style="transition-delay: 0.15s;">
+          <div class="circular-frame">
+            <div class="mjolnir-viewer"
+                 data-model-src="assets/martelo.glb"
+                 data-orbit="0deg 90deg 8m"
+                 aria-label="Mjolnir 3D Viewer">
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- ================= FOOTER SECTION ================= -->
+  <footer class="section-footer" id="footer">
+    <!-- Async Background Video Container -->
+    <div class="bg-media-container">
+      <img src="assets/footer-bg.webp" class="bg-static" alt="Thor Footer Background Image">
+      <video class="bg-video-async" id="footer-video" autoplay muted loop playsinline>
+        <source src="assets/video-footer.mp4" type="video/mp4">
+      </video>
+      <div class="bg-overlay"></div>
+    </div>
+
+    <!-- Footer Content -->
+    <div class="footer-content">
+      <h1 class="footer-title reveal-on-scroll fade-in-left">
+        <span>AS TEMPESTADES</span>
+        <span>CHEGAM AOS</span>
+        <span>CINEMAS</span>
+      </h1>
+      <p class="footer-subtitle reveal-on-scroll fade-in-left" style="transition-delay: 0.15s;">
+        Uma vez na vida, você assiste a algo que não esquece. Esse é o momento.
+      </p>
+      <div class="footer-buttons reveal-on-scroll fade-in-left" style="transition-delay: 0.3s;">
+        <a href="https://www.ingresso.com/filme/thor-amor-e-trovao" class="btn btn-primary" id="footer-btn-ingressos" target="_blank" rel="noopener noreferrer">GARANTA SEU INGRESSO</a>
+        <button class="btn btn-secondary" id="footer-btn-trailer">ASSISTA AO TRAILER</button>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
